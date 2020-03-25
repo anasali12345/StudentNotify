@@ -9,14 +9,18 @@ import android.widget.ImageView;
 
 public class DashboardMain extends AppCompatActivity {
 
-  private  ImageView dashEvents, dashSchedule, dashProject, dashPublication, dashResearch, dashBack;
+    private ImageView dashSchedule;
+    private ImageView dashProject;
+    private ImageView dashPublication;
+    private ImageView dashResearch;
+    private ImageView dashBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_main);
         dashBack = findViewById(R.id.dash_back);
-        dashEvents = findViewById(R.id.dash_event_img);
+        ImageView dashEvents = findViewById(R.id.dash_event_img);
         dashSchedule = findViewById(R.id.dash_schedule_img);
         dashProject = findViewById(R.id.dash_project_img);
         dashPublication = findViewById(R.id.dash_publication_img);

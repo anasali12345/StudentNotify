@@ -9,7 +9,8 @@
         android:icon="@drawable/applogo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="">
         <activity android:name=".UploadProjects" />
         <activity android:name=".UploadResearch" />
         <activity android:name=".UploadSchedule" />
