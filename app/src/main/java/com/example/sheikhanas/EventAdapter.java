@@ -15,16 +15,16 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {
-    ArrayList<EventModel> list;
+    private ArrayList<EventModel> list;
 
-    public EventAdapter(ArrayList<EventModel> list) {
+    EventAdapter(ArrayList<EventModel> list) {
         this.list = list;
     }
 
     @NonNull
     @Override
     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.event_item_layout, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.event_item_layout, parent, false);
         return new EventViewHolder(view);
     }
 
@@ -40,10 +40,11 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         return list.size();
     }
 
-    public class EventViewHolder extends RecyclerView.ViewHolder{
+    static class EventViewHolder extends RecyclerView.ViewHolder {
         ImageView eventImage;
         MaterialTextView eventDescription;
-        public EventViewHolder(@NonNull View itemView) {
+
+        EventViewHolder(@NonNull View itemView) {
             super(itemView);
             eventImage = itemView.findViewById(R.id.event_show_img);
             eventDescription = itemView.findViewById(R.id.show_description_event);
